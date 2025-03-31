@@ -1,0 +1,8 @@
+﻿DA PROMPT:
+dotnet ef migrations add <MigrationName> -o Migrations
+dotnet ef database update
+
+
+DA PACKAGE MANAGER CONSOLE:
+Add-Migration <MigrationName> -OutputDir Migrations
+Update-Database
