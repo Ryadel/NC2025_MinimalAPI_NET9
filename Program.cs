@@ -61,7 +61,20 @@ if (app.Environment.IsDevelopment())
 }
 
 // Metodi Minimal API
-// app.MapGet("/", () => "Hello World!");
+app.MapGet("/", (HttpRequest request) =>
+{
+    var dic = request.Query
+        .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+    return Results.Json(dic);
+});
+
+app.MapPost("/", (HttpRequest request) =>
+{
+    var dic = request.HasFormContentType
+        ? request.Form.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.ToString())
+        : new Dictionary<string, string>();
+    return Results.Json(dic);
+});
 
 // Endpoint Minimal API
 app.MapCategoriesEndpoints();
