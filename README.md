@@ -30,7 +30,7 @@ The demo explores the new features introduced in the upcoming version of the pla
 ## 📁 Project Structure
 
 ```
-NC2025_MinimalAPI_NET9/
+NC2025_MinimalAPI_NET8/
 ├── Program.cs                   # Entry point with service registration and endpoint mapping
 ├── Extensions/                  # Extension methods for builder and app configuration
 ├── Models/                      # EF Core data models
@@ -53,8 +53,8 @@ NC2025_MinimalAPI_NET9/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Ryadel/NC2025_MinimalAPI_NET9.git
-   cd NC2025_MinimalAPI_NET9
+   git clone https://github.com/Ryadel/NC2025_MinimalAPI_NET8.git
+   cd NC2025_MinimalAPI_NET8
    ```
 
 2. Run the application:

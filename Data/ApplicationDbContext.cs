@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NC2025_MinimalAPI_NET9.Models;
+using NC2025_MinimalAPI_NET8.Models;
 
-namespace NC2025_MinimalAPI_NET9.Data
+namespace NC2025_MinimalAPI_NET8.Data
 {
     public class ApplicationDbContext : DbContext
     {

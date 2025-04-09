@@ -1,4 +1,4 @@
-﻿namespace NC2025_MinimalAPI_NET9.Models
+﻿namespace NC2025_MinimalAPI_NET8.Models
 {
     public class Product
     {

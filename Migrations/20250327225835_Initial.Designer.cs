@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NC2025_MinimalAPI_NET9.Data;
+using NC2025_MinimalAPI_NET8.Data;
 
 #nullable disable
 
-namespace NC2025_MinimalAPI_NET9.Migrations
+namespace NC2025_MinimalAPI_NET8.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250327225835_Initial")]
@@ -19,7 +19,7 @@ namespace NC2025_MinimalAPI_NET9.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.3");
 
-            modelBuilder.Entity("NC2025_MinimalAPI_NET9.Models.Category", b =>
+            modelBuilder.Entity("NC2025_MinimalAPI_NET8.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,7 +34,7 @@ namespace NC2025_MinimalAPI_NET9.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("NC2025_MinimalAPI_NET9.Models.Product", b =>
+            modelBuilder.Entity("NC2025_MinimalAPI_NET8.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -57,9 +57,9 @@ namespace NC2025_MinimalAPI_NET9.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("NC2025_MinimalAPI_NET9.Models.Product", b =>
+            modelBuilder.Entity("NC2025_MinimalAPI_NET8.Models.Product", b =>
                 {
-                    b.HasOne("NC2025_MinimalAPI_NET9.Models.Category", "Category")
+                    b.HasOne("NC2025_MinimalAPI_NET8.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -68,7 +68,7 @@ namespace NC2025_MinimalAPI_NET9.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("NC2025_MinimalAPI_NET9.Models.Category", b =>
+            modelBuilder.Entity("NC2025_MinimalAPI_NET8.Models.Category", b =>
                 {
                     b.Navigation("Products");
                 });

@@ -1,7 +1,7 @@
-﻿using NC2025_MinimalAPI_NET9.Models;
-using NC2025_MinimalAPI_NET9.Repositories.Interfaces;
+﻿using NC2025_MinimalAPI_NET8.Models;
+using NC2025_MinimalAPI_NET8.Repositories.Interfaces;
 
-namespace NC2025_MinimalAPI_NET9.Endpoints
+namespace NC2025_MinimalAPI_NET8.Endpoints
 {
     public static class ProductsEndpoints
     {

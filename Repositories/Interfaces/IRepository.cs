@@ -1,4 +1,4 @@
-﻿namespace NC2025_MinimalAPI_NET9.Repositories.Interfaces
+﻿namespace NC2025_MinimalAPI_NET8.Repositories.Interfaces
 {
     public interface IRepository<T> where T : class
     {

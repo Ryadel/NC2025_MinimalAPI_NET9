@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace NC2025_MinimalAPI_NET9.Migrations
+namespace NC2025_MinimalAPI_NET8.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
