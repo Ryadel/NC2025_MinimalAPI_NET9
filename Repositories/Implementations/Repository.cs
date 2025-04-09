@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NC2025_MinimalAPI_NET9.Data;
-using NC2025_MinimalAPI_NET9.Repositories.Interfaces;
+using NC2025_MinimalAPI_NET8.Data;
+using NC2025_MinimalAPI_NET8.Repositories.Interfaces;
 
-namespace NC2025_MinimalAPI_NET9.Repositories.Implementations
+namespace NC2025_MinimalAPI_NET8.Repositories.Implementations
 {
     public class Repository<T> : IRepository<T> where T : class
     {

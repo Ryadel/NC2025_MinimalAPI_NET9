@@ -1,16 +1,17 @@
 using Microsoft.EntityFrameworkCore;
-using NC2025_MinimalAPI_NET9.Data;
-using NC2025_MinimalAPI_NET9.Endpoints;
-using NC2025_MinimalAPI_NET9.Repositories.Implementations;
-using NC2025_MinimalAPI_NET9.Repositories.Interfaces;
+using NC2025_MinimalAPI_NET8.Data;
+using NC2025_MinimalAPI_NET8.Endpoints;
+using NC2025_MinimalAPI_NET8.Repositories.Implementations;
+using NC2025_MinimalAPI_NET8.Repositories.Interfaces;
 using Microsoft.OpenApi.Models;
 using Scalar.AspNetCore;
+using Swashbuckle.AspNetCore.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Aggiunta supporto a OpenAPI (Swagger)
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApi();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -36,9 +37,9 @@ using (var scope = app.Services.CreateScope())
 if (app.Environment.IsDevelopment())
 {
     // Aggiunta supporto a OpenAPI (Swagger)
-    var oaName = "NC2025_MinimalAPI_NET9";
+    var oaName = "NC2025_MinimalAPI_NET8";
     var oaEndpoint = "/openapi/v1.json";
-    app.MapOpenApi(oaEndpoint);
+    app.UseSwagger();
 
     // Swashbuckle.AspNetCore.SwaggerUI
     // default URL: /swagger
